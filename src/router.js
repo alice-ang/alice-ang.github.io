@@ -9,7 +9,7 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/gallery',
+            path: '/',
             name: 'gallery',
             component: Gallery
         },
@@ -21,3 +21,4 @@ export default new Router({
 
     ]
 });
+
