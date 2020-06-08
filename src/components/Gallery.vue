@@ -51,7 +51,7 @@ export default {
                  },
                 {
                     title: "This Portfolio Site!",
-                    description: "Vue.js, Node.js",
+                    description: "Vue.js, Express, Node.js",
                     img:{
                     url: require("../assets/projects/portfolio.png"),
                     alt:"My portfolio site in Vue.js and Node.js",
