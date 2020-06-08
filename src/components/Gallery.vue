@@ -1,4 +1,3 @@
-
 <template>
     <div class="container">
         <div class="gallery-container" v-for="(project, i) in projects" :key="i">
@@ -63,7 +62,7 @@ export default {
                     description: "Summer Intern Project | Vue.js, SpringBoot, API",
                     img:{
                     url: require("../assets/projects/dashboard.png"),
-                    alt:"Dashboard applikation in Vue.js and Springboot",
+                    alt:"Dashboard application in Vue.js and Springboot",
                     } ,
                     link: "https://1drv.ms/v/s!AlDwnON_r5i_hTD16-OdftLUW5L2"
                  },                               
