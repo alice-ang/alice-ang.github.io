@@ -1,9 +1,9 @@
 <template>
   <div class="container">
       <section id="left">
-          <h1>Hi there,</h1>
-          <p>My name is Alice and I currently make things for fun but would like to make thing for money. I'm based in Skövde, Sweden where I just finished a bachelor's degree in web development at Högskolan i Skövde. </p>
-        <button><a href = "mailto: alice.anglesjo@hotmail.com">Send Email</a></button>
+            <h1>Hi there,</h1>
+            <p>My name is Alice and I currently make things for fun but would like to make thing for money. I'm based in Skövde, Sweden where I just finished a bachelor's degree in web development at Högskolan i Skövde. Feel free to get in touch!</p>
+            <button><a href = "mailto: alice.anglesjo@hotmail.com">Send Email</a> <i class="far fa-hand-point-left fa-2x"></i></button>
       </section>
       <section id="right" v-on:click="modal()">
             <img :src="img.url" :alt="img.alt">
@@ -62,15 +62,14 @@ export default {
             }
             button{
                 border-radius: 5px;
-                padding: 1em;
-                margin: 1em;
-                width: 50%;
-                a{
-                color: #ffffff;
-                text-decoration: none;
-                }
+                width: 100%;
                 background: tomato;
                 transition: 0.3s ease-in-out;
+                a, i {
+                    color: #ffffff;
+                    text-decoration: none;
+                    line-height: 50px;
+                }
                 &:hover{
                     transform: scale(1.1);
                     background: #e0563d;
@@ -86,6 +85,10 @@ export default {
             margin: 0;
             height: 300px;
             overflow: scroll;
+            transition: 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
             img {
                 width: 100%;
                 height: 100%;

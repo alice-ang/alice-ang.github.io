@@ -4,6 +4,7 @@
     <section id="content">
       <Nav id="nav"/>
       <router-view id="router"/>
+      <footer id="contact-info"><p><i class="fas fa-mobile-alt"></i> +4670-7273384</p> <p><i class="far fa-envelope"></i> alice.anglesjo@hotmail.com</p></footer>
     </section>
   </div>
 </template>
@@ -19,6 +20,7 @@ export default {
 }
 </script>
 <style lang="scss" >
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 $desktop: 840px;
 
 @mixin desktop {
@@ -30,7 +32,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
     #app{
       display: grid;
       grid-template-rows: auto auto;
@@ -40,15 +42,23 @@ body {
     #content{
       display: grid;
       grid-area: content;
-      grid-template-rows: 50px auto;
+      grid-template-rows: 50px auto 50px;
       grid-template-areas:
-      "nav" 
-      "routerView";
+      "nav"
+      "routerView"
+      "footer";
         #nav {
           grid-area: nav;
         }
         #router {
           grid-area: routerView;
+        }
+        #contact-info{
+          grid-area: footer;
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+
         }
       }
 

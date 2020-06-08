@@ -40,6 +40,7 @@ nav {
             transition: 0.3s;
             display: inline-block;
             font-weight: bold;
+            font-size: 20px;
             a{
                 text-decoration: none;
                 color: #f3f3f3;
