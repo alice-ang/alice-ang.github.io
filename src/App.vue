@@ -64,7 +64,8 @@ body {
 
     #bg{
       grid-area: content;
-      height: 100vh;
+      min-height: 100vh;
+      max-height: fit-content;
       background-image: linear-gradient( 135deg, #FAD7A1 10%, #E96D71 100%);        
       display: block;
         z-index: -1;
