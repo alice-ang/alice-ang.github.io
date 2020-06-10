@@ -65,6 +65,15 @@ export default {
                     alt:"Dashboard application in Vue.js and Springboot",
                     } ,
                     link: "https://1drv.ms/v/s!AlDwnON_r5i_hTD16-OdftLUW5L2"
+                 },  
+                {
+                    title: "Filmmaker Portfolio",
+                    description: "Bootstrap",
+                    img:{
+                    url: require("../assets/projects/film.png"),
+                    alt:"Portfolio site for filmmaker",
+                    } ,
+                    link: "http://vschonberg.com/film.html"
                  },                               
              ]
          }
