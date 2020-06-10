@@ -50,7 +50,7 @@ export default {
                      } ,
                  },
                 {
-                    title: "This Portfolio Site!",
+                    title: "This Portfolio Site",
                     description: "Vue.js, Express, Node.js",
                     img:{
                     url: require("../assets/projects/portfolio.png"),
