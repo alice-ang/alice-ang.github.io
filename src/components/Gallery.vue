@@ -56,16 +56,16 @@ export default {
                     title: "This Portfolio Site",
                     description: "Vue.js, Express, Node.js",
                     img:{
-                    url: require("../assets/projects/portfolio.png"),
-                    alt:"My portfolio site in Vue.js and Node.js",
+                        url: require("../assets/projects/portfolio.png"),
+                        alt:"My portfolio site in Vue.js and Node.js",
                     } ,
                  },
                 {
                     title: "Dashboard App",
                     description: "Summer Intern Project | Vue.js, SpringBoot, API",
                     img:{
-                    url: require("../assets/projects/dashboard.png"),
-                    alt:"Dashboard application in Vue.js and Springboot",
+                        url: require("../assets/projects/dashboard.png"),
+                        alt:"Dashboard application in Vue.js and Springboot",
                     } ,
                     link: "https://1drv.ms/v/s!AlDwnON_r5i_hTD16-OdftLUW5L2"
                  },  
@@ -73,8 +73,8 @@ export default {
                     title: "Filmmaker Portfolio",
                     description: "Bootstrap",
                     img:{
-                    url: require("../assets/projects/film.png"),
-                    alt:"Portfolio site for filmmaker",
+                        url: require("../assets/projects/film.png"),
+                        alt:"Portfolio site for filmmaker",
                     } ,
                     link: "http://vschonberg.com/film.html"
                  },                               
