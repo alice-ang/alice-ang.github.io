@@ -6,6 +6,7 @@
                 <div class="text">
                     <h2>{{project.title}}</h2>
                     <p>{{project.description}}</p>
+                    <a v-if="project.github" :href="project.github" target="_blank"><i class="fab fa-github-alt" title="Show code on Github"></i></a>
                 </div>
                 <div class="image">
                     <img v-bind:src="project.img.url" alt="project.img.alt">
@@ -25,16 +26,17 @@ export default {
                  {
                      title: "Apex Legends Stats Tracker",
                      description: "Express, Node.js, API, Vue.js",
+                     github: "https://github.com/alice-ang/apex-tracker",
                      img:{
                         url: require("../assets/projects/apex.png"),
                         alt:"Form for entering apex legends profile information",
-                        hover: require("../assets/projects/apex2.png"),
                      } ,
                      link: "https://mighty-sierra-34248.herokuapp.com/"
                  },
                  {
                      title: "Task and User Database",
                      description: "Express, Node.js, MongoDB, Vue.js",
+                     github: 'https://github.com/alice-ang/vue-db',
                      img:{
                         url: require("../assets/projects/tasks.png"),
                         alt:"Post-it layout of tasks",
@@ -44,6 +46,7 @@ export default {
                 {
                      title: "Java Dino Puzzle",
                      description: "School Project | Java, Swing",
+                     github: "https://github.com/a17alian/LuckyCardGame",
                      img:{
                         url: require("../assets/projects/puzzle.png"),
                         alt:"Dinosaur Puzzle in Java",
@@ -52,6 +55,7 @@ export default {
                 {
                     title: "This Portfolio Site",
                     description: "Vue.js, Express, Node.js",
+                    github: 'https://github.com/alice-ang/portfolio',
                     img:{
                     url: require("../assets/projects/portfolio.png"),
                     alt:"My portfolio site in Vue.js and Node.js",
@@ -125,6 +129,7 @@ $desktop: 900px; // min-width
     .gallery-item{
         @include sizing();
         position: relative;
+        overflow: scroll;
         .image{
             @include sizing();
             @include shadow();
@@ -187,6 +192,18 @@ $desktop: 900px; // min-width
             color: #ffffff;
             pointer-events: none;
             z-index: 4;
+             a {
+                 text-decoration: none;
+                 pointer-events: auto;
+                 padding: 10px;
+                 color: white;
+                  transition: .3s ease-in-out;
+                 &:hover {
+                     color: #E96D71 ;
+                    text-decoration: underline;
+
+                 }
+             }
         }
         @include desktop{
         .text {
