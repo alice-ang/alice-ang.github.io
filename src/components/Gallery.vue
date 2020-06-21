@@ -1,19 +1,20 @@
 <template>
     <div class="container">
         <div class="gallery-container" v-for="(project, i) in projects" :key="i">
-            <a :href="project.link" target="_blank">
             <div class="gallery-item" >
                 <div class="text">
                     <h2>{{project.title}}</h2>
                     <p>{{project.description}}</p>
-                    <a v-if="project.github" :href="project.github" target="_blank"><i class="fab fa-github-alt" title="Show code on Github"></i></a>
+                    <span>
+                    <a v-if="project.github" :href="project.github" target="_blank"><i class="fab fa-github-alt" title="Show code on Github"></i> </a>
+                    <a v-if="project.link" :href="project.link" target="_blank"><i class="fas fa-laptop-code" title="Show demo"></i> </a>
+                    </span>
                 </div>
                 <div class="image">
                     <img v-bind:src="project.img.url" alt="project.img.alt">
                       <div class="overlay"></div>
                 </div>
             </div>
-            </a>
         </div>
     </div>
 </template>
@@ -191,18 +192,27 @@ $desktop: 900px; // min-width
             color: #ffffff;
             pointer-events: none;
             z-index: 4;
-             a {
-                 text-decoration: none;
-                 pointer-events: auto;
-                 padding: 10px;
-                 color: white;
-                  transition: .3s ease-in-out;
-                 &:hover {
-                     color: #E96D71 ;
-                    text-decoration: underline;
+            span {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+                flex-wrap: wrap;
+                a {
+                    text-decoration: none;
+                    pointer-events: auto;
+                    padding: 10px;
+                    color: white;
+                    transition: .3s ease-in-out;
+                    i {
+                        font-size: 1.5em;
+                    }
+                    &:hover {
+                        color: #E96D71 ;
+                        text-decoration: underline;
 
-                 }
-             }
+                    }
+                }
+            }
         }
         @include desktop{
         .text {
@@ -217,12 +227,12 @@ $desktop: 900px; // min-width
             transition: .3s ease-in-out;
         }
 
-        &:hover .text {
-            opacity: 1;
-            animation: move-down .3s linear;
-            padding: 1em;
-            width: 100%;
-        }            
+            &:hover .text {
+                opacity: 1;
+                animation: move-down .3s linear;
+                padding: 1em;
+                width: 100%;
+            }            
         }
 
 
