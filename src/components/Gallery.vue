@@ -72,12 +72,12 @@ export default {
                  },  
                 {
                     title: "Filmmaker Portfolio",
-                    description: "Bootstrap",
+                    description: "Vue.js, Node.js",
                     img:{
-                        url: require("../assets/projects/film.png"),
+                        url: require("../assets/projects/vendela.png"),
                         alt:"Portfolio site for filmmaker",
                     } ,
-                    link: "http://vschonberg.com/film.html"
+                    link: "http://vschonberg.com/"
                  },                               
              ]
          }
